@@ -852,11 +852,12 @@ function autocomplete(el) {
     }
   }
 
-  function deferredFilteringNoEnter(e) {
+  function deferredFilteringNoEnterOrTab(e) {
     var which = e.which || e.keyCode;
-    if (which === KEY_ENTER) {
+    if (which === KEY_ENTER || which === KEY_TAB) {
       return;
     }
+
     deferredFiltering();
   }
 
@@ -918,7 +919,7 @@ function autocomplete(el) {
     if (anyInput) {
       _crossvent2.default[op](attachment, 'keypress', deferredShow);
       _crossvent2.default[op](attachment, 'keypress', deferredFiltering);
-      _crossvent2.default[op](attachment, 'keydown', deferredFilteringNoEnter);
+      _crossvent2.default[op](attachment, 'keydown', deferredFilteringNoEnterOrTab);
       _crossvent2.default[op](attachment, 'paste', deferredFiltering);
       _crossvent2.default[op](attachment, 'keydown', keydown);
       if (o.autoHideOnBlur) {

@@ -685,11 +685,12 @@ function autocomplete (el, options = {}) {
     }
   }
 
-  function deferredFilteringNoEnter (e) {
+  function deferredFilteringNoEnterOrTab (e) {
     const which = e.which || e.keyCode;
-    if (which === KEY_ENTER) {
+    if (which === KEY_ENTER || which === KEY_TAB) {
       return;
     }
+
     deferredFiltering();
   }
 
@@ -749,7 +750,7 @@ function autocomplete (el, options = {}) {
     if (anyInput) {
       crossvent[op](attachment, 'keypress', deferredShow);
       crossvent[op](attachment, 'keypress', deferredFiltering);
-      crossvent[op](attachment, 'keydown', deferredFilteringNoEnter);
+      crossvent[op](attachment, 'keydown', deferredFilteringNoEnterOrTab);
       crossvent[op](attachment, 'paste', deferredFiltering);
       crossvent[op](attachment, 'keydown', keydown);
       if (o.autoHideOnBlur) { crossvent[op](attachment, 'keydown', hideOnBlur); }
