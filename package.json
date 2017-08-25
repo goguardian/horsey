@@ -1,5 +1,5 @@
 {
-  "name": "horsey",
+  "name": "@goguardian/horsey",
   "version": "4.2.4",
   "description": "Progressive and customizable autocomplete component",
   "main": "horsey.es5.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bevacqua/horsey.git"
+    "url": "https://github.com/goguardian/horsey.git"
   },
-  "author": "Nicolas Bevacqua <nicolasbevacqua@gmail.com> (http://bevacqua.io/)",
+  "author": "GoGuardian Engineering <eng@goguardian.com> (https://goguardian.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bevacqua/horsey/issues"
+    "url": "https://github.com/goguardian/horsey/issues"
   },
-  "homepage": "https://github.com/bevacqua/horsey",
+  "homepage": "https://github.com/goguardian/horsey",
   "dependencies": {
     "bullseye": "1.5.0",
     "contra": "1.9.4",
